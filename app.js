@@ -23,8 +23,8 @@ port           = process.env.PORT || 3000,
 db             = mongoose.connect(config.getDbConnectionString());
 
 // Retrieve initial route.
-const indexRoute = require('./routes/indexRoute'),
-userRoute = require('./routes/userRoute');
+const indexRoute = require('./routes/index'),
+userRoute = require('./routes/users');
 
 // Set bodyParser and cookieParser module. 
 app.use(bodyParser.json());
