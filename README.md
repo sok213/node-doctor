@@ -12,5 +12,6 @@ This is a Scaffolding tool to easily kick start NodeJS applications without havi
 ## Setup
 
 1. Make sure to add your database URI link into the return string within the `config/index.js` folder on `line 8` before starting the server.
-2. Start the server by running `npm start`
-3. Navigate to [localhost:3000](http://localhost:3000/)
+2. Install dependencies by running `npm install`.
+3. Start the server by running `npm start`.
+4. Navigate to [localhost:3000](http://localhost:3000/)
