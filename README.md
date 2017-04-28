@@ -1,4 +1,4 @@
-# Node App Scaffolding 
+# Node Doctor Scaffolding 
 
 This is a Scaffolding tool to easily kick start NodeJS applications without having to worry about developing user authentication and security from scratch. 
 
