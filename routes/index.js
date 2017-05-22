@@ -9,12 +9,6 @@ const router = express.Router();
 // Public route for home page.
 router.get('/', (req, res) => {
   console.log(res.locals);
-  // Find all books posted by every user and send it back to client.
-  User.find({}, ['-email', '-city', '-state'], (err, doc) => {
-    res.render('home', {
-      books: doc
-    });
-  });
 });
 
 // Public route for sign up.
