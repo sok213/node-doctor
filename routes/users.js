@@ -64,5 +64,12 @@ router.post('/register', (req, res) => {
   });
 });
 
+// Handler for 404 page.
+router.get('*', (req, res) => {
+  res.status(404).render('404', {
+    error_msg: 'Page not found.'
+  });
+});
+
 // Export the router methods.
 module.exports = router;
