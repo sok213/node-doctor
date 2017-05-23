@@ -141,4 +141,11 @@ passport.deserializeUser((id, done) => {
 app.use('/', indexRoute);
 app.use('/users', userRoute);
 
+// Public route for 404 page.
+app.get('*', (req, res) => {
+  res.status(404).render('public/404', {
+    error_msg: 'Page not found.'
+  });
+});
+
 app.listen(port, () => console.log('Listening on PORT: ', port));
