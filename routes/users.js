@@ -9,7 +9,7 @@ const router = express.Router();
 
 // Private route for profile settings.
 router.get('/settings', (req, res) => {
-  res.render('settings');
+  res.render('private/settings');
 });
 
 // Private route for user profile.
@@ -36,14 +36,14 @@ router.post('/register', (req, res) => {
   let errors = req.validationErrors();
   
   if(errors) {
-    return res.render('sign-up', { errors });
+    return res.render('private/sign-up', { errors });
   }
   
   // Check if user name already exists.
   User.find({username: body.username}, (err, result) => {
     if(err) throw err;
     if(result[0]) {
-      return res.render('register', {
+      return res.render('private/register', {
         errors: [{msg: 'Username already exists!'}]
       });
     }
@@ -66,7 +66,7 @@ router.post('/register', (req, res) => {
 
 // Handler for 404 page.
 router.get('*', (req, res) => {
-  res.status(404).render('404', {
+  res.status(404).render('public/404', {
     error_msg: 'Page not found.'
   });
 });

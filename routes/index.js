@@ -13,12 +13,12 @@ router.get('/', (req, res) => {
 
 // Public route for sign up.
 router.get('/login', (req, res) => {
-  res.render('login');
+  res.render('public/login');
 });
 
 // Public route for sign up.
 router.get('/signup', (req, res) => {
-  res.render('sign-up');
+  res.render('public/sign-up');
 });
 
 // POST /login to sign-in existing users.
